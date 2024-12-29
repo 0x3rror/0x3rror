@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="./im/favicon.ico">
+    <style>
+        @keyframes data-stealing {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+        .data-stealing {
+            display: none;
+            color: lime;
+            font-size: 2em;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: data-stealing 2s infinite;
+        }
+    </style>
+    <script>
+        let dataStealingShown = false;
+        window.onclick = function() {
+            if (!dataStealingShown) {
+                alert('You Got Hacked ☣️');
+                document.querySelector('.data-stealing').style.display = 'block';
+                setTimeout(function() {
+                    fetch('https://ipapi.co/json/')
+                        .then(response => response.json())
+                        .then(data => {
+                            alert(`Your IP: ${data.ip}\nLocation: ${data.city}, ${data.region}, ${data.country_name}`);
+                            setTimeout(freezeScreenAndPlaySound, 2000);
+                        });
+                }, 5000);
+                dataStealingShown = true;
+            }
+        };
+
+        function freezeScreenAndPlaySound() {
+            document.body.style.pointerEvents = 'none';
+            const audio = new Audio('./im/voice.mp3');
+            audio.play().catch(error => {
+                console.error('Audio playback failed:', error);
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="matrix-background"></div>
+    <header>
+        <h1>You Have been Pawned By 0x3rror</h1>
+    </header>
+    <div class="data-stealing">Stealing Your Data...</div>
+</body>
+</html>

@@ -1,0 +1,251 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #000;
+    color: #fff;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.matrix-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    z-index: -1;
+    overflow: hidden;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+    border: 2px solid #800080;
+    box-shadow: 0 0 10px #800080;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 10px;
+    animation: fadeIn 2s ease-in-out;
+    border: 2px solid #800080;
+    box-shadow: 0 0 10px #800080;
+}
+
+.project {
+    background: rgba(26, 26, 26, 0.5);
+    margin: 1rem 0;
+    padding: 1rem;
+    border: 1px solid #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin: 0.5rem 0 0.2rem;
+}
+
+form input, form textarea {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #333;
+    background-color: rgba(26, 26, 26, 0.5);
+    color: #fff;
+}
+
+form button {
+    padding: 0.7rem;
+    border: none;
+    background: #800080;
+    color: #fff;
+    cursor: pointer;
+}
+
+footer {
+    background: rgba(51, 51, 51, 0.5);
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 10px;
+    animation: fadeIn 2s ease-in-out;
+    position: relative; /* Change from fixed to relative */
+    margin-top: 2rem; /* Add margin to separate from content */
+    border: 2px solid #800080;
+    box-shadow: 0 0 10px #800080;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 0.5rem 0;
+    }
+
+    section {
+        padding: 1rem;
+        margin: 1rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    header, section, footer {
+        padding: 0.5rem;
+        margin: 0.5rem;
+    }
+
+    nav ul li {
+        margin: 0.2rem 0;
+    }
+
+    nav ul {
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 0.5rem 0;
+    }
+
+    form input, form textarea {
+        width: 100%;
+    }
+}
+
+#socials {
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 10px;
+    animation: fadeIn 2s ease-in-out;
+    border: 2px solid #800080;
+    box-shadow: 0 0 10px #800080;
+}
+
+#socials .social {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    justify-content: center;
+}
+
+#socials .social a {
+    transition: transform 0.3s ease-in-out;
+}
+
+#socials .social a:hover {
+    transform: scale(1.1);
+}
+
+#socials .social img {
+    width: 100%;
+    max-width: 100px;
+    height: auto;
+    border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+    #socials .social {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    #socials .social {
+        grid-template-columns: 1fr;
+    }
+}
+
+#location {
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 10px;
+    animation: fadeIn 2s ease-in-out;
+    border: 2px solid #800080;
+    box-shadow: 0 0 10px #800080;
+}
+
+#location p {
+    margin: 0.5rem 0;
+}
+
+#about {
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 10px;
+    animation: fadeIn 2s ease-in-out;
+    border: 2px solid #800080;
+    box-shadow: 0 0 10px #800080;
+}
+
+#about .about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: slideIn 2s ease-in-out;
+}
+
+#about .about-content img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    object-fit: cover; /* Ensure the image covers the container */
+}
+
+#about .about-text {
+    max-width: 600px;
+    text-align: center;
+}
+
+#about .about-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    background-color: #800080;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#about .about-link:hover {
+    background-color: #a000a0;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
