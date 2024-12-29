@@ -2,7 +2,7 @@
 <h1 align="center"><b></b><img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="35"></h1>
 
 <p align="center">
-  <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=8D00F7&background=AB00FF00&center=true&multiline=true&width=435&lines=Hello;I+Am+0xError" alt="Typing SVG" /></a>
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=920CF7&width=435&lines=0x3rror" alt="Typing SVG" /></a>
 </p>
 
 
@@ -86,5 +86,5 @@
 
 <br>
 
-[0XERRORS](https://github.com/0xErrors)
+[0x3rror](https://github.com/0x3rror)
 
